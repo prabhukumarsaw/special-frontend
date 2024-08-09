@@ -46,7 +46,7 @@ function Header({ className }: { className?: string }) {
 
   return (
     <>
-      <header className="fixed inset-x-0  top-0 flex h-16 items-center justify-between gap-4 border-b bg-slate-50 px-4 md:px-6 z-50">
+      <header className="fixed inset-x-0 top-0 flex h-16 items-center justify-between gap-4 border-b bg-slate-50 px-4 md:px-6 z-50">
         {/* Logo on the Left */}
         <div className="flex shrink-0">
           <a aria-current="page" className="flex items-center" href="/">
@@ -90,7 +90,8 @@ function Header({ className }: { className?: string }) {
       </header>
 
       {/* Bottom Navigation for Mobile Screens */}
-      <nav className=" inset-x-0 bottom-0 z-10 flex items-center justify-around bg-white py-2 shadow-lg sm:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-around bg-white py-2 shadow-lg sm:hidden">
+
         <a href="/" className="flex flex-col items-center">
           <HomeIcon className="h-6 w-6 text-gray-600" />
           <span className="text-xs text-gray-600">Home</span>

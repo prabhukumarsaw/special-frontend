@@ -1,39 +1,62 @@
+"use client";
 import React from "react";
-import Image from "next/image"; // Use this if you are using Next.js
-import { BackgroundBeams } from "./ui/background-beams";
-import {Cover} from "@/components/ui/cover"
-import FeatureHeroGrid from "@/components/FeatureHeroGrid";
-import Subtitle from "./Subtitle";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import Image from "next/image";
 
-const ExperienceSection = () => {
+const content = [
+  {
+    title: " Taxi Transit",
+    subTitle: "PREDICTIONS AND PROJECTIONS",
+    description:
+      "People want to know what's in it for them. Businesses that recognize and harness this power are more likely to succeed in satisfying customer needs and fostering brand loyalty.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Easy Route
+      </div>
+    ),
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+];
+ function StickyScrollRevealDemo() {
   return (
-    <div className="relative overflow-hidden w-full py-12 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <BackgroundBeams />
-      </div>
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between">
-      
-        <div className="text-center px-4 text-wrap lg:text-left max-w-lg lg:max-w-2xl mx-auto lg:mx-0">
-        <Subtitle subtitle="Choose your own Destination" />
-        <h1 className="text-4xl sm:text-xl md:text-2xl my-4 lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-amber-200 to-amber-800 mb-4 ">
-        Explore Jharkhand{''}s Untouched Beauty and <br /> at <Cover>Vibrant Culture</Cover>
-      </h1>
-    
-          <p className="text-gray-500 font-medium sm:text-xs md:text-md lg:text-lg mb-6">
-            Welcome to MailJet, the best transactional email service on the web.
-            We provide reliable, scalable, and customizable email solutions for
-            your business. Whether you&apos;re sending order confirmations,
-            password reset emails, or promotional campaigns, MailJet has got you
-            covered.
-          </p>
-        </div>
-        <div className="w-full lg:w-1/2 mt-8 lg:mt-0 hidden md:block">
-          {/* Add a responsive image or any other content here */}
-          <FeatureHeroGrid />
-        </div>
-      </div>
+    <div className="">
+      <StickyScroll content={content} />
     </div>
   );
-};
-
-export default ExperienceSection;
+}
+export default StickyScrollRevealDemo

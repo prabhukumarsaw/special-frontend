@@ -3,6 +3,10 @@ import Hero from "@/components/Hero"; // Adjust the import path as necessary
 import SearchFeature from "@/components/SearchFeature";
 import ServiceFeature from "@/components/ServiceFeature";
 import ExperienceSection from "@/components/Experience";
+import GalleryFeature from "@/components/GalleryFeature";
+import TestimonialSection from "@/components/TestimonialSection";
+import Title from "@/components/Title";
+
 
 const FullWidthSection = () => {
   return (
@@ -17,18 +21,33 @@ const FullWidthSection = () => {
 
       <section className="section col-span-5">
         <div className=" mx-10">
-        <h5 className="services__subtitle">What We Serve</h5>
-        <h2 className=" text-2xl font-bold">We Offer Our Best Services</h2>
+        <Title title={"We Offer Our Best Services"} subTitle={"What We Serve"}/>
         </div>
         <ServiceFeature />
       </section>
 
       <section className="section col-span-5">
-        <div className=" mx-10">
-        <h5 className="services__subtitle">Experience</h5>
+        <div className="mx-10">
+        <Title title={"Will our all experience we will serve you"} subTitle={"Experience"}/>
         </div>
         <ExperienceSection />
       </section>
+
+
+      <section className="section col-span-5">
+        <div className=" mx-10">
+        <Title title={"Visit Our Customers Tour Gallery"} subTitle={"Gallery"}/>
+        </div>
+        <GalleryFeature />
+      </section>
+
+      <section className="section col-span-5">
+        <div className=" mx-10">
+      <Title title={"What our Customers Say about us"} subTitle={"Testimonial"}/>
+        </div>
+        <TestimonialSection />
+      </section>
+      
     </div>
   );
 };

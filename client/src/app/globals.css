@@ -33,7 +33,7 @@ body {
     color: var(--heading-color);
 }
 .section {
-  margin-bottom: 10px;
+  margin-bottom: 4rem;
 }
 
 .section__subtitle {
