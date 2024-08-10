@@ -6,7 +6,6 @@ import Image from "next/image";
 const content = [
   {
     title: " Taxi Transit",
-    subTitle: "PREDICTIONS AND PROJECTIONS",
     description:
       "People want to know what's in it for them. Businesses that recognize and harness this power are more likely to succeed in satisfying customer needs and fostering brand loyalty.",
     content: (
