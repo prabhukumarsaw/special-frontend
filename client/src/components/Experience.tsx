@@ -10,7 +10,7 @@ const content = [
     description:
       "People want to know what's in it for them. Businesses that recognize and harness this power are more likely to succeed in satisfying customer needs and fostering brand loyalty.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center  text-white">
         Easy Route
       </div>
     ),

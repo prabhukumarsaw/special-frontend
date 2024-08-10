@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import { FloatingNav } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
-import { MenuIcon, XIcon, HomeIcon, SearchIcon, UserIcon } from "lucide-react";
+import { MenuIcon, XIcon, HomeIcon, SearchIcon, UserIcon, MoonIcon, SunIcon } from "lucide-react";
 import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input";
 import Image from "next/image";
 import { Button } from "./ui/moving-border";
+import ProfileSidebar from "./ProfileSidebar";
 
 const navItems = [
   {
@@ -16,6 +17,21 @@ const navItems = [
   {
     name: "About",
     link: "/about",
+    icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Tour",
+    link: "/tour",
+    icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Rent Cab",
+    link: "/rent",
+    icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Buy & Sell",
+    link: "/deals",
     icon: <UserIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
@@ -44,6 +60,7 @@ function Header({ className }: { className?: string }) {
     console.log("submitted");
   };
 
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 flex h-16 items-center justify-between gap-4 border-b bg-slate-50 px-4 md:px-6 z-50">
@@ -61,8 +78,7 @@ function Header({ className }: { className?: string }) {
         </div>
 
         {/* Nav Menu Centered on Large Screens */}
-         <FloatingNav navItems={navItems} />
-        
+        <FloatingNav navItems={navItems} />
 
         {/* Search Bar on the Right */}
         <div className="flex items-center gap-4 md:ml-auto">
@@ -74,24 +90,13 @@ function Header({ className }: { className?: string }) {
             />
           </div>
         </div>
-        <Button
-        borderRadius="1.75rem"
-        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-      >
-          <Image
-            src="https://randomuser.me/api/portraits/men/75.jpg"
-            width={36}
-            height={36}
-            alt="Avatar"
-            className="overflow-hidden rounded-full"
-          />
-      </Button>
-      
+
+        <ProfileSidebar />
+  
       </header>
 
       {/* Bottom Navigation for Mobile Screens */}
       <nav className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-around bg-white py-2 shadow-lg sm:hidden">
-
         <a href="/" className="flex flex-col items-center">
           <HomeIcon className="h-6 w-6 text-gray-600" />
           <span className="text-xs text-gray-600">Home</span>

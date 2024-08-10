@@ -11,7 +11,7 @@ import Title from "@/components/Title";
 const FullWidthSection = () => {
   return (
     <div className="grid grid-cols-5 gap-4 md:gap-8">
-      <section className="section col-span-5">
+      <section className="section col-span-5 ">
         <Hero />
       </section>
 
@@ -26,7 +26,7 @@ const FullWidthSection = () => {
         <ServiceFeature />
       </section>
 
-      <section className="section col-span-5">
+      <section className="section col-span-5 ">
         <div className="mx-10">
         <Title title={"Will our all experience we will serve you"} subTitle={"Experience"}/>
         </div>
