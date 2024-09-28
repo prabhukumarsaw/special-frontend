@@ -101,13 +101,22 @@ function Header({ className }: { className?: string }) {
           <HomeIcon className="h-6 w-6 text-gray-600" />
           <span className="text-xs text-gray-600">Home</span>
         </a>
-        <a href="/search" className="flex flex-col items-center">
+        <a href="/tour" className="flex flex-col items-center">
           <SearchIcon className="h-6 w-6 text-gray-600" />
-          <span className="text-xs text-gray-600">Search</span>
+          <span className="text-xs text-gray-600">Tour</span>
+        </a>
+        <a href="/deals" className="flex flex-col items-center">
+          <HomeIcon className="h-6 w-6 text-gray-600" />
+          <span className="text-xs text-gray-600">Service</span>
+        </a>
+       
+        <a href="/rent" className="flex flex-col items-center">
+          <UserIcon className="h-6 w-6 text-gray-600" />
+          <span className="text-xs text-gray-600">Rent</span>
         </a>
         <a href="/profile" className="flex flex-col items-center">
           <UserIcon className="h-6 w-6 text-gray-600" />
-          <span className="text-xs text-gray-600">Profile</span>
+          <span className="text-xs text-gray-600">Dashboard</span>
         </a>
       </nav>
     </>
